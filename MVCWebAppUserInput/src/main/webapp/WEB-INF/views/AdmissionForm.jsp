@@ -18,7 +18,8 @@
 																	<option value = "Spring Core">Spring Core</option>
 																	<option value = "Spring MVC">Spring MVC</option>
 																	</select>
-												</td></tr>
+													    </td>
+				</tr>
 			</table>
 			
 			<table>

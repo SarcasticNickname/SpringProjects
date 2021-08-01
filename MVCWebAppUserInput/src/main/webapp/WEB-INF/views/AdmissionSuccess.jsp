@@ -17,7 +17,7 @@
 
 		<tr>
 			<td>Student hobby</td>
-			<td>${student1.strudentHobby}</td>
+			<td>${student1.studentHobby}</td>
 		</tr>
 
 		<tr>

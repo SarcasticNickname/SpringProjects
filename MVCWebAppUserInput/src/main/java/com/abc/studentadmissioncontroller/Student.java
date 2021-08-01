@@ -1,17 +1,27 @@
 package com.abc.studentadmissioncontroller;
 
-import java.util.ArrayList;
 import java.util.Date;
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 public class Student {
 	
+	@Pattern(regexp = "^[0-9]*")
 	private String studentName;
+	
+	@Size(min = 2, max = 30, message = "Please enter value between {min} and {max} characters")
 	private String studentHobby;
 	
+	@Max(999999999)
 	private Long studentMobile;
+	
+	@Past
 	private Date studentDOB;
-	private ArrayList<String> studentSkills;
-	private Address address;
+	private String [] studentSkills;
+	private Address studentAddress;
 	
 	public String getStudentName() {
 		return studentName;
@@ -37,17 +47,16 @@ public class Student {
 	public void setStudentDOB(Date studentDOB) {
 		this.studentDOB = studentDOB;
 	}
-	public ArrayList<String> getStudentSkills() {
+	public String [] getStudentSkills() {
 		return studentSkills;
 	}
-	public void setStudentSkills(ArrayList<String> studentSkills) {
+	public void setStudentSkills(String [] studentSkills) {
 		this.studentSkills = studentSkills;
 	}
-	public Address getAddress() {
-		return address;
+	public Address getStudentAddress() {
+		return studentAddress;
 	}
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setStudentAddress(Address studentAddress) {
+		this.studentAddress = studentAddress;
 	}
-	
 }
