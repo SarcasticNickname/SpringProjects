@@ -3,4 +3,5 @@ module com.abc{
 	requires spring.webmvc;
 	requires spring.web;
 	requires jakarta.validation;
+	requires javax.servlet.api;
 }
